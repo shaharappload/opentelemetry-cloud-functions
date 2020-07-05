@@ -1,6 +1,10 @@
 "use strict";
 
-const OpenTelemetryTracer = require("./lib/opentelemetry-tracer");
+const {
+  OpenTelemetryTracer,
+  SpanKind,
+  CanonicalCode,
+} = require("./lib/opentelemetry-tracer");
 const Logger = require("./lib/winston-logger");
 
 class OpenTelemetryCloudFunctions {
@@ -19,6 +23,6 @@ class OpenTelemetryCloudFunctions {
 
 module.exports = {
   OpenTelemetryCloudFunctions,
-  SpanKind: OpenTelemetryTracer.SpanKind,
-  CanonicalCode: OpenTelemetryTracer.CanonicalCode,
+  SpanKind,
+  CanonicalCode,
 };
