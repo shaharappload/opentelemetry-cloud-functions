@@ -1,6 +1,6 @@
 {
   "name": "opentelemetry-cloud-functions",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "OpenTelemetry for Google Cloud Functions (Pub/Sub).",
   "main": "index.js",
   "contributors": [
