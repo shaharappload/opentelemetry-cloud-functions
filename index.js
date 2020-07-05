@@ -1,11 +1,15 @@
 "use strict";
 
 const OpenTelemetryTracer = require("./lib/opentelemetry-tracer");
-const createWinstonLogger = require("./lib/winston-logger");
+const Logger = require("./lib/winston-logger");
 
 class OpenTelemetryCloudFunctions {
   constructor(serviceName) {
-    this._tracer = new OpenTelemetryTracer(serviceName, createWinstonLogger);
+    this._tracer = new OpenTelemetryTracer(
+      serviceName,
+      Logger.createWinstonLogger
+    );
+    Logger.rebindConsole(this._tracer._getLogger());
   }
 
   createTracerHOF(originalFunction) {
@@ -14,3 +18,5 @@ class OpenTelemetryCloudFunctions {
 }
 
 module.exports = OpenTelemetryCloudFunctions;
+exports.SpanKind = OpenTelemetryTracer.SpanKind;
+exports.CanonicalCode = OpenTelemetryTracer.CanonicalCode;
