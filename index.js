@@ -9,7 +9,7 @@ class OpenTelemetryCloudFunctions {
       serviceName,
       Logger.createWinstonLogger
     );
-    Logger.rebindConsole(this._tracer._getLogger());
+    Logger.rebindConsole(this._tracer.logger);
   }
 
   createTracerHOF(originalFunction) {
