@@ -17,6 +17,8 @@ class OpenTelemetryCloudFunctions {
   }
 }
 
-module.exports = OpenTelemetryCloudFunctions;
-exports.SpanKind = OpenTelemetryTracer.SpanKind;
-exports.CanonicalCode = OpenTelemetryTracer.CanonicalCode;
+module.exports = {
+  OpenTelemetryCloudFunctions,
+  SpanKind: OpenTelemetryTracer.SpanKind,
+  CanonicalCode: OpenTelemetryTracer.CanonicalCode,
+};
