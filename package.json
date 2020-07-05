@@ -1,0 +1,24 @@
+{
+  "name": "opentelemetry-cloud-functions",
+  "version": "0.1.0",
+  "description": "OpenTelemetry for Google Cloud Functions (Pub/Sub).",
+  "main": "index.js",
+  "contributors": [
+    {
+      "name": "Appload",
+      "url": "https://github.com/shaharappload"
+    }
+  ],
+  "repository": {
+    "git": "https://github.com/shaharappload/opentelemetry-cloud-functions"
+  },
+  "author": "Appload",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/opentelemetry-cloud-trace-exporter": "^0.3.0",
+    "@opentelemetry/api": "^0.9.0",
+    "@opentelemetry/core": "^0.9.0",
+    "@opentelemetry/tracing": "^0.9.0",
+    "winston": "^3.3.3"
+  }
+}
